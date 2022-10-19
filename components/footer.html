@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+     <meta charset="utf-8">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <footer width="100%" ></footer>
+    <ul>
+        <li style="--clr:#1877f2">
+            <a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li style="--clr:#ff0000">
+            <a href="#">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </li>
+
+        <li style="--clr:#1da1f2">
+            <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+        </li>
+
+        <li style="--clr:#c32aa3">
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </li>
+
+        <li style="--clr:#25d366">
+            <a href="#">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </li>
+
+    </ul>
+    <br><br><!--
+        <div>
+            <p class="footer-dev">Developed by Felipe Foresto</p>
+            <p class="footer-copy">&copy;2022 - Todos os direitos reservados.</p>
+        </div>-->
+    </footer>
+</body>
+</html>
+
+<style>
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+
+   :root{
+      --tr: transparent;  
+    }
+
+    body {
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 40vh;
+        background: var(--tr);
+    }   
+
+    ul {
+        display: flex;
+        padding: 0.5em 0 0 5em;
+        gap: clamp(25px, 25px + 2vw, 120px);
+    }
+    
+ul li {
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    width: clamp(0.3em, 0.2em + 1vw, 0.6em);
+    height: clamp(0.3em, 0.2em + 1vw, 0.6em);
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+}
+
+ul li:hover {
+    z-index: 10000;
+    transform: scale(0.75);
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    inset:30;
+    transition: 0.5s;
+}
+
+ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--clr);
+    z-index: 10;
+    font-size: 2em;
+}
+
+ul li:hover a {
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr))
+}
+
+.footer-copy {
+    font-size: 10vh;
+    right: 0;
+    margin-top: 1.6em;
+    position:absolute;
+}
+
+.footer-dev {
+    font-size: 10vh;
+    right: 0;
+    margin-top: 0.6em;
+    position:absolute;
+}
+
+</style>
